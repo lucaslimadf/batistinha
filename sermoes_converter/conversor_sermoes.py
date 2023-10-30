@@ -52,6 +52,6 @@ if not os.path.exists(csv_file):
 # Adiciona as informações no arquivo CSV. Ordem correta: ID DATA LINK IMAGEM TITULO DESCRIÇÃO AUTOR
 with open(csv_file, mode='a', newline='', encoding='utf-8') as file:
     writer = csv.writer(file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
-    writer.writerow([id, date.strftime('%Y-%m-%d %H:%M:%S'), video_url, image, title, description, author])
+    writer.writerow(["", date.strftime('%Y-%m-%d %H:%M:%S'), video_url, image, title, description, author])
     
 print('Informações salvas com sucesso!')
